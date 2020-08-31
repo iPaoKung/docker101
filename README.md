@@ -9,6 +9,7 @@ docker ps
 docker stop [container id]
 docker ps -a
 docker exec -it [container id] sh
+docker stop [container id]
 docker rm [container id] -f
 ```
 ### Docker Ship
@@ -16,6 +17,11 @@ docker rm [container id] -f
 docker login
 docker tag welcomebootcamp:0.0.1 sal2apao/welcomebootcamp:0.0.1
 docker push sal2apao/welcomebootcamp:0.0.1
+```
+### Docker Run
+```
+docker pull sal2apao/welcomebootcamp:0.0.1
+docker run -d -p 80:80 sal2apao/welcomebootcamp:0.0.1
 ```
 
 ### Clean up
