@@ -25,9 +25,13 @@ docker run -d -p 80:80 sal2apao/welcomebootcamp:0.0.1
 
 ### Clean up
 ```
+docker stop $(docker ps -a -q)
 docker rm [container id] -f
+docker rm $(docker ps -a -q)
+docker rm $(docker ps -a -f status=exited -q)
 docker rmi [image id]
-docker system prune 
+docker rmi $(docker images -a -q)
+docker system prune -a
 ```
 
 ### Reference Document
