@@ -1,5 +1,5 @@
 # Welcome to Bootcamp
-## Docker 101 for Innovation Lab
+## Docker 101
 ## Guideline
 ```
 docker build  -t welcomebootcamp:0.0.1 .
