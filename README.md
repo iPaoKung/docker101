@@ -1,14 +1,27 @@
 # Welcome to Bootcamp
-## Docker 101
-### Guideline
+## Docker 101 Guideline
+### Docker Build
 ```
 docker build  -t welcomebootcamp:0.0.1 .
-docker images
-docker run -d -p 80:80 welcomebootcamp:0.0.1
-docker stop [containerid]
+docker image ls
+docker run -p 80:80 welcomebootcamp:0.0.1
 docker ps
+docker stop [container id]
 docker ps -a
-docker exec -it [containerid] sh
+docker exec -it [container id] sh
+docker rm [container id] -f
+```
+### Docker Ship
+```
+docker login
+docker tag welcomebootcamp:0.0.1 sal2apao/welcomebootcamp:0.0.1
+docker push sal2apao/welcomebootcamp:0.0.1
+```
+
+### Clean up
+```
+docker rmi [image id]
+docker system prune 
 ```
 
 ### Reference Document
